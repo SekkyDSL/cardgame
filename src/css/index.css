@@ -1,0 +1,86 @@
+.background {
+    background-image: url("../../public/assets/background/index.png");
+    background-repeat: no-repeat;
+  /*　上下　左右　中央揃え　*/
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+/* 上下左右中央揃え */
+.selectBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.selection {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.selection::after {
+    position: absolute;
+    right: 15px;
+    width: 10px;
+    height: 7px;
+    background-color: #535353;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    pointer-events: none;
+}
+
+.selection select {
+    appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em calc(.8em + 30px) .4em .8em;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #333333;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.startButton {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.startButton::after {
+    position: absolute;
+    right: 15px;
+    width: 10px;
+    height: 7px;
+    background-color: #535353;
+    pointer-events: auto;
+}
+
+.startButton button {
+    appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em calc(.8em + 30px) .4em .8em;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #333333;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* h1　上下のマージン 10px */
+.selectBox h1 {
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    margin-bottom: 1em;
+    margin: 10px 0;
+}
+
